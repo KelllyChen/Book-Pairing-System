@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score
+import joblib
 
 def train_with_grid_search():
     # Step 1: Load and prepare data
@@ -50,6 +51,10 @@ def train_with_grid_search():
     print(f"F1 Score:  {f1_score(y_test, y_pred):.4f}")
     print("\nDetailed Report:")
     print(classification_report(y_test, y_pred, target_names=["Theory", "Practice"]))
+
+    joblib.dump(grid.best_estimator_, "ml/classical_type_model.pkl")
+    joblib.dump(vectorizer, "ml/type_vectorizer.pkl")
+
 
 if __name__ == "__main__":
     train_with_grid_search()
