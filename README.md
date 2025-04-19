@@ -23,7 +23,7 @@ To run the Streamlit demo locally, run `streamlit run app.py`
 
 # 2. Data
 To keep this project focused and lightweight as a **Minimum Viable Product (MVP)**, I narrowed the book domain to **AI-related topics only**.
-- Books data were fetched using **Google Books API**
+- Books data was fetched using **Google Books API**
 - Used Google's **Gemini API** to automatically label each book by:
   - **Level:** Beginner or Advanced
   - **Type:** Theory or Practice
