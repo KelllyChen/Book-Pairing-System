@@ -47,7 +47,7 @@ As a baseline, I implement a simple keyword-based classification method to label
 
 ---
 
-### 🔹 Type Classification (Theory vs. Practice)
+### Type Classification (Theory vs. Practice)
 
 | Class     | Precision | Recall | F1 Score | 
 |-----------|-----------|--------|----------|
@@ -62,6 +62,42 @@ As a baseline, I implement a simple keyword-based classification method to label
 - **F1 Score (Practice):** 0.4924
 
 ## Non-Deep Learning Models
+### How it works
+- **Text Representation:** TF-IDF (Term Frequency–Inverse Document Frequency) was applied to book descriptions with a max feature size of 5000.
+- **Model Used:** Random Forest Classifier
+- **Hyperparameter Tuning:** Performed using GridSearchCV with 5-fold cross-validation.
+- **Train-Test Split:** 80/20 stratified split to preserve class distribution.
+- **Label Encoding:**
+  - Beginner = 0, Advanced = 1
+  - Theory = 0, Practice = 1
+### Level Classification (Beginner vs. Advanced)
+
+| Class     | Precision | Recall | F1 Score |
+|-----------|-----------|--------|----------|
+| Beginner  | 0.73      | 0.86   | 0.79     |
+| Advanced  | 0.77      | 0.59   | 0.67     | 
+
+**Overall Metrics:**
+
+- **Accuracy:** 0.7419  
+- **Precision (Advanced):** 0.7692  
+- **Recall (Advanced):** 0.5882  
+- **F1 Score (Advanced):** 0.6667
+
+### Type Classification (Theory vs. Practice)
+
+| Class     | Precision | Recall | F1 Score |
+|-----------|-----------|--------|----------|
+| Beginner  | 0.75      | 0.88   | 0.81     |
+| Advanced  | 0.78      | 0.59   | 0.67     | 
+
+**Overall Metrics:**
+
+- **Accuracy:** 0.7582  
+- **Precision (Advanced):** 0.7755  
+- **Recall (Advanced):** 0.5938  
+- **F1 Score (Advanced):** 0.6726
+
 ## Deep Learning Models
 # Application
 
