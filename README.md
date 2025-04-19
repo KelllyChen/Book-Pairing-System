@@ -20,7 +20,14 @@ These metrics help assess how well the models distinguish between book levels (e
 - Install packages `pip install -r requirements.txt`
 To run the Streamlit demo locally, run `streamlit run app.py`
 
-# 2. Approaches
+# 2. Data
+To keep this project focused and lightweight as a **Minimum Viable Product (MVP)**, I narrowed the book domain to **AI-related topics only**.
+- Books data were fetched using **Google Books API**
+- Used Google's **Gemini API** to automatically label each book by:
+  - **Level:** Beginner or Advanced
+  - **Type:** Theory or Practice
+
+# 3. Approaches
 ## Naive Mean Model
 As a baseline, I implement a simple keyword-based classification method to label books by level (Beginner vs. Advanced) and type (Theory vs. Practice).
 ### How it works
@@ -143,7 +150,10 @@ As a baseline, I implement a simple keyword-based classification method to label
 - **Recall (Advanced):** 0.6406  
 - **F1 Score (Advanced):** 0.7256
 
-# 3. Application
+# 4. Application
+- The app fetched the books using **Google Books API** at real time
+- Used coisine similarity to find related books based on the topic users input
+- Use the fune-tuned BERT model predict the labels and output results, 3 books for each category
 
 ## Demo Link
 [**Book Pairing System**](https://huggingface.co/spaces/kellly/Book-Pairing-System)
