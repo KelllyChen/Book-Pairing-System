@@ -31,10 +31,35 @@ As a baseline, I implement a simple keyword-based classification method to label
     - If the description includes terms such as "theory", "conceptual", or "fundamental", it is categorized as Theory.
     - Otherwise, it is labeled as Practice.
 ### Evaluation
-- **Accuracy**:  0.4771
-- **Precision**: 0.4128
-- **Recall**:    0.6101
-- **F1 Score**:  0.4924
+### 🔹 Level Classification (Beginner vs. Advanced)
+
+| Class     | Precision | Recall | F1 Score | Support |
+|-----------|-----------|--------|----------|---------|
+| Beginner  | 0.52      | 0.67   | 0.58     | 339     |
+| Advanced  | 0.66      | 0.51   | 0.57     | 432     |
+
+**Overall Metrics:**
+
+- **Accuracy:** 0.5785  
+- **Precision (Advanced):** 0.5159  
+- **Recall (Advanced):** 0.6696  
+- **F1 Score (Advanced):** 0.5828
+
+---
+
+### 🔹 Type Classification (Theory vs. Practice)
+
+| Class     | Precision | Recall | F1 Score | Support |
+|-----------|-----------|--------|----------|---------|
+| Theory    | 0.41      | 0.61   | 0.49     | 318     |
+| Practice  | 0.58      | 0.38   | 0.46     | 447     |
+
+**Overall Metrics:**
+
+- **Accuracy:** 0.4771  
+- **Precision (Practice):** 0.4128  
+- **Recall (Practice):** 0.6101  
+- **F1 Score (Practice):** 0.4924
 
 ## Non-Deep Learning Models
 ## Deep Learning Models
