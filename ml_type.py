@@ -6,6 +6,13 @@ from sklearn.metrics import classification_report, accuracy_score, precision_sco
 import joblib
 
 def train_with_grid_search():
+    """
+    Vectorized the books' description useing TF-IDF
+    Split data into training and testing set
+    Trained a RandomForest Classifier for type(Theory/Practice)and used GridSearchCV to found the best parameters
+    Evaluated on testing set
+    Saved models and vectorizer
+    """
     # Step 1: Load and prepare data
     df = pd.read_csv("data/labeled_books.csv")
     df = df[df["type"].isin(["Theory", "Practice"])].dropna(subset=["description"]).reset_index(drop=True)

@@ -11,6 +11,12 @@ semantic_model = SentenceTransformer("all-MiniLM-L6-v2")
 
 
 def run_inference(model_path, vec_path, label_map, books_df, topic):
+    """
+    Runs semantic search on book descriptions based on a topic, then predicts labels using a trained ML model.
+
+    Returns the top 30 most relevant books with predicted labels and similarity scores.
+    """
+
     model = joblib.load(model_path)
     vectorizer = joblib.load(vec_path)
 
