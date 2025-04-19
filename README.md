@@ -10,7 +10,7 @@ Traditional book recommendation systems suggest individual books based on user p
     - **Deep Learning Models:** Fine-tuned BERT models for semantic understanding and classification
 - **Real-World Application:** A user-friendly web application that users can input a topic and select a pairing style(e.g., Beginner → Advanced, Theory ↔ Practice). The system will show related books and recommend three books for each category.
 
-## Evaluation Metric:
+## Evaluation Metric
 To evaluate the performance of the classification models used in book pairing, **Accuracy**, **Precision**, **Recall**, **F1Score** were applied.
 These metrics help assess how well the models distinguish between book levels (e.g., Beginner vs. Advanced) and types (e.g., Theory vs. Practice).
 
