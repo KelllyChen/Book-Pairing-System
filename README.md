@@ -15,6 +15,7 @@ To evaluate the performance of the classification models used in book pairing, *
 These metrics help assess how well the models distinguish between book levels (e.g., Beginner vs. Advanced) and types (e.g., Theory vs. Practice).
 
 # 1. Running Instruction
+- Get Google Books API key and Gemini API key and save them in .env
 - Create venv `python -m venv .venv`
 - Activate venv `source .venv/bin/activate`
 - Install packages `pip install -r requirements.txt`
