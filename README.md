@@ -143,7 +143,7 @@ As a baseline, I implement a simple keyword-based classification method to label
 - **Recall (Advanced):** 0.6406  
 - **F1 Score (Advanced):** 0.7256
 
-# Application
+# 3. Application
 
 ## Demo Link
 [**Book Pairing System**](https://huggingface.co/spaces/kellly/Book-Pairing-System)
