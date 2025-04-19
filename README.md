@@ -33,10 +33,10 @@ As a baseline, I implement a simple keyword-based classification method to label
 ### Evaluation
 ### 🔹 Level Classification (Beginner vs. Advanced)
 
-| Class     | Precision | Recall | F1 Score | Support |
-|-----------|-----------|--------|----------|---------|
-| Beginner  | 0.52      | 0.67   | 0.58     | 339     |
-| Advanced  | 0.66      | 0.51   | 0.57     | 432     |
+| Class     | Precision | Recall | F1 Score |
+|-----------|-----------|--------|----------|
+| Beginner  | 0.52      | 0.67   | 0.58     |
+| Advanced  | 0.66      | 0.51   | 0.57     | 
 
 **Overall Metrics:**
 
@@ -49,10 +49,10 @@ As a baseline, I implement a simple keyword-based classification method to label
 
 ### 🔹 Type Classification (Theory vs. Practice)
 
-| Class     | Precision | Recall | F1 Score | Support |
-|-----------|-----------|--------|----------|---------|
-| Theory    | 0.41      | 0.61   | 0.49     | 318     |
-| Practice  | 0.58      | 0.38   | 0.46     | 447     |
+| Class     | Precision | Recall | F1 Score | 
+|-----------|-----------|--------|----------|
+| Theory    | 0.41      | 0.61   | 0.49     | 
+| Practice  | 0.58      | 0.38   | 0.46     | 
 
 **Overall Metrics:**
 
