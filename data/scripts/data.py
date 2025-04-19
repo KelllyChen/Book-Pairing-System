@@ -68,3 +68,5 @@ if __name__ == "__main__":
     df = pd.DataFrame(all_books).drop_duplicates(subset=["title", "authors"])
     df.to_csv("data/all_books.csv", index=False)
     print(f"Saved {len(df)} unique books to 'data/all_books.csv'")
+    
+
