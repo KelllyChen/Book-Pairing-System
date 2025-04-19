@@ -31,6 +31,11 @@ Do not include any extra text or formatting.
 """
 
 def label_books(df):
+    """
+    Use gemini to label all books
+    Levels: Beginner/Advanced
+    Types: Theory/Practice
+    """
     levels = []
     types = []
 

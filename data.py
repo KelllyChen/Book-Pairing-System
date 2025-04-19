@@ -19,6 +19,9 @@ SEARCH_QUERIES = [
 ]
 
 def fetch_books(query, max_results=60):
+    """
+    Use Google Book API to get book data from defined criterias
+    """
     books = []
     seen_ids = set()
     for start_index in range(0, max_results, 10):
