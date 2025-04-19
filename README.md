@@ -99,6 +99,50 @@ As a baseline, I implement a simple keyword-based classification method to label
 - **F1 Score (Advanced):** 0.6726
 
 ## Deep Learning Models
+### How it works
+- **Model:** [`BertForSequenceClassification`](https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForSequenceClassification) with 2 output labels and a dropout rate of 0.3.
+- **Tokenizer:** `BertTokenizer` with truncation, padding, and a max token length of 256.
+- **Text Input:** Raw book descriptions from a labeled dataset (`Theory`, `Practice`) mapped to numeric labels.
+- **Dataset Class:** Custom `BookDataset` class extends PyTorch `Dataset` for use with the Hugging Face `Trainer` API.
+- **Data Split:** 80/20 stratified train-test split using `train_test_split`.
+- **Training Framework:** Hugging Face's `Trainer` + `TrainingArguments`
+- **Training Configuration:**
+  - Epochs: 4  
+  - Batch Size: 16  
+  - Learning Rate: 2e-5  
+  - Weight Decay: 0.01  
+  - Evaluation + Save steps: Every 500 steps  
+  - Logging: Every 10 steps  
+  - GPU support enabled if available
+
+### Level Classification (Beginner vs. Advanced)
+
+| Class     | Precision | Recall | F1 Score |
+|-----------|-----------|--------|----------|
+| Beginner  | 0.79      | 0.69   | 0.74     |
+| Advanced  | 0.66      | 0.76   | 0.71     | 
+
+**Overall Metrics:**
+
+- **Accuracy:** 0.7225  
+- **Precision (Advanced):** 0.6582  
+- **Recall (Advanced):** 0.7647  
+- **F1 Score (Advanced):** 0.7074
+
+### Type Classification (Theory vs. Practice)
+
+| Class     | Precision | Recall | F1 Score |
+|-----------|-----------|--------|----------|
+| Beginner  | 0.78      | 0.91   | 0.84     |
+| Advanced  | 0.84      | 0.64   | 0.73     | 
+
+**Overall Metrics:**
+
+- **Accuracy:** 0.7973 
+- **Precision (Advanced):** 0.8367  
+- **Recall (Advanced):** 0.6406  
+- **F1 Score (Advanced):** 0.7256
+
 # Application
 
 ## Demo Link
