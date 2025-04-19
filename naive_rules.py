@@ -5,18 +5,27 @@ BEGINNER_KEYWORDS = ["beginner", "easy", "intro", "introduction", "basic", "simp
 THEORY_KEYWORDS = ["theory", "conceptual", "fundamental", "overview", "principle"]
 
 def classify_by_keywords_level(text):
+    """
+    Classify a book description as 'Beginner' if it contains beginner-related keywords; else 'Advanced'.
+    """
     text = text.lower()
     if any(keyword in text for keyword in BEGINNER_KEYWORDS):
         return "Beginner"
     return "Advanced"
 
 def classify_by_keywords_type(text):
+    """
+    Classify a book description as 'Theory' if it contains theory-related keywords; else 'Practice'.
+    """
     text = text.lower()
     if any(keyword in text for keyword in THEORY_KEYWORDS):
         return "Theory"
     return "Practice"
 
 def evaluate_naive_level_model():
+    """
+    Evaluate the rule-based level classifier using labeled book data and print performance metrics.
+    """
     df = pd.read_csv("data/labeled_books.csv").dropna(subset=["description", "level"]).copy()
     df["predicted_label"] = df["description"].apply(classify_by_keywords_level)
 
@@ -32,6 +41,9 @@ def evaluate_naive_level_model():
     print(classification_report(y_true, y_pred, target_names=["Beginner", "Advanced"]))
 
 def evaluate_naive_type_model():
+    """
+    Evaluate the rule-based type classifier using labeled book data and print performance metrics.
+    """
     df = pd.read_csv("data/labeled_books.csv").dropna(subset=["description", "type"]).copy()
     df = df[df["type"].isin(["Theory", "Practice"])].copy()  # filter out 'Both'
     df["predicted_label"] = df["description"].apply(classify_by_keywords_type)
