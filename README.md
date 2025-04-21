@@ -39,7 +39,7 @@ As a baseline, I implement a simple keyword-based classification method to label
     - If the description includes terms such as "theory", "conceptual", or "fundamental", it is categorized as Theory.
     - Otherwise, it is labeled as Practice.
 ### Evaluation
-### 🔹 Level Classification (Beginner vs. Advanced)
+### Level Classification (Beginner vs. Advanced)
 
 | Class     | Precision | Recall | F1 Score |
 |-----------|-----------|--------|----------|
