@@ -156,3 +156,6 @@ streamlit run app.py
 ```
 
 Click on the Local URL (http://localhost:8501) to open the Streamlit app in your browser.
+
+# 5. Ethics statement
+This project does not involve human subjects, personal data, or sensitive information. All book data used is publicly available through the Google Books API or open datasets. The system is designed solely for educational and informational purposes. Efforts were made to ensure fair and unbiased recommendations; however, model limitations may occasionally reflect bias present in the training data. We are committed to transparency and continuous improvement.
