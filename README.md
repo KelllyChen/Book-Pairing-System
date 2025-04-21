@@ -49,9 +49,7 @@ As a baseline, I implement a simple keyword-based classification method to label
 **Overall Metrics:**
 
 - **Accuracy:** 0.5785  
-- **Precision (Advanced):** 0.5159  
-- **Recall (Advanced):** 0.6696  
-- **F1 Score (Advanced):** 0.5828
+
 
 ---
 
@@ -65,9 +63,7 @@ As a baseline, I implement a simple keyword-based classification method to label
 **Overall Metrics:**
 
 - **Accuracy:** 0.4771  
-- **Precision (Practice):** 0.4128  
-- **Recall (Practice):** 0.6101  
-- **F1 Score (Practice):** 0.4924
+
 
 ## Non-Deep Learning Models
 ### How it works
@@ -88,23 +84,19 @@ As a baseline, I implement a simple keyword-based classification method to label
 **Overall Metrics:**
 
 - **Accuracy:** 0.7419  
-- **Precision (Advanced):** 0.7692  
-- **Recall (Advanced):** 0.5882  
-- **F1 Score (Advanced):** 0.6667
+
 
 ### Type Classification (Theory vs. Practice)
 
 | Class     | Precision | Recall | F1 Score |
 |-----------|-----------|--------|----------|
-| Beginner  | 0.75      | 0.88   | 0.81     |
-| Advanced  | 0.78      | 0.59   | 0.67     | 
+| Theory    | 0.75      | 0.88   | 0.81     |
+| Practice  | 0.78      | 0.59   | 0.67     | 
 
 **Overall Metrics:**
 
 - **Accuracy:** 0.7582  
-- **Precision (Advanced):** 0.7755  
-- **Recall (Advanced):** 0.5938  
-- **F1 Score (Advanced):** 0.6726
+
 
 ## Deep Learning Models
 ### How it works
@@ -133,23 +125,19 @@ As a baseline, I implement a simple keyword-based classification method to label
 **Overall Metrics:**
 
 - **Accuracy:** 0.7225  
-- **Precision (Advanced):** 0.6582  
-- **Recall (Advanced):** 0.7647  
-- **F1 Score (Advanced):** 0.7074
+
 
 ### Type Classification (Theory vs. Practice)
 
 | Class     | Precision | Recall | F1 Score |
 |-----------|-----------|--------|----------|
-| Beginner  | 0.78      | 0.91   | 0.84     |
-| Advanced  | 0.84      | 0.64   | 0.73     | 
+| Theory    | 0.78      | 0.91   | 0.84     |
+| Practice  | 0.84      | 0.64   | 0.73     | 
 
 **Overall Metrics:**
 
 - **Accuracy:** 0.7973 
-- **Precision (Advanced):** 0.8367  
-- **Recall (Advanced):** 0.6406  
-- **F1 Score (Advanced):** 0.7256
+
 
 # 4. Application
 - The app fetched the books using **Google Books API** at real time
