@@ -14,7 +14,7 @@ def train_with_grid_search():
     Saved models and vectorizer
     """
     # Step 1: Load and prepare data
-    df = pd.read_csv("data/labeled_books.csv")
+    df = pd.read_csv("../data/outputs/labeled_books.csv")
     df = df[df["level"].isin(["Beginner", "Advanced"])].dropna(subset=["description"]).reset_index(drop=True)
     label_map = {"Beginner": 0, "Advanced": 1}
     df["label"] = df["level"].map(label_map)

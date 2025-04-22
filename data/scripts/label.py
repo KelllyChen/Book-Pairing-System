@@ -71,5 +71,5 @@ if __name__ == "__main__":
     levels, types = label_books(df)
     df["level"] = levels
     df["type"] = types
-    df.to_csv("data/labeled_books.csv", index=False)
-    print("Saved to 'data/labeled_books.csv'")
+    df.to_csv("../outputs/labeled_books.csv", index=False)
+    print("Saved to 'labeled_books.csv'")

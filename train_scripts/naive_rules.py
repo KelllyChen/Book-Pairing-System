@@ -26,7 +26,7 @@ def evaluate_naive_level_model():
     """
     Evaluate the rule-based level classifier using labeled book data and print performance metrics.
     """
-    df = pd.read_csv("data/labeled_books.csv").dropna(subset=["description", "level"]).copy()
+    df = pd.read_csv("../data/outputs/labeled_books.csv").dropna(subset=["description", "level"]).copy()
     df["predicted_label"] = df["description"].apply(classify_by_keywords_level)
 
     y_true = df["level"]
@@ -44,7 +44,7 @@ def evaluate_naive_type_model():
     """
     Evaluate the rule-based type classifier using labeled book data and print performance metrics.
     """
-    df = pd.read_csv("data/labeled_books.csv").dropna(subset=["description", "type"]).copy()
+    df = pd.read_csv("../data/outputs/labeled_books.csv").dropna(subset=["description", "type"]).copy()
     df = df[df["type"].isin(["Theory", "Practice"])].copy()  # filter out 'Both'
     df["predicted_label"] = df["description"].apply(classify_by_keywords_type)
 

@@ -47,7 +47,7 @@ if __name__ == "__main__":
     label_map_level = {"Beginner": 0, "Advanced": 1}
     label_map_type = {"Theory": 0, "Practice": 1}
 
-    books = pd.read_csv("data/all_books.csv")
+    books = pd.read_csv("../data/outputs/all_books.csv")
 
     if mode == "beginner/advanced":
         print("\n=== LEVEL PAIR RECOMMENDATIONS ===")
