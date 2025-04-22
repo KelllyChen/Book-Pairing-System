@@ -67,7 +67,7 @@ As a baseline, I implement a simple keyword-based classification method to label
 
 ## Non-Deep Learning Models
 ### How it works
-- **Text Representation:** TF-IDF (Term Frequency–Inverse Document Frequency) was applied to book descriptions with a max feature size of 5000.
+- **Text Representation:** TF-IDF was applied to book descriptions with a max feature size of 5000.
 - **Model Used:** Random Forest Classifier
 - **Hyperparameter Tuning:** Performed using GridSearchCV with 5-fold cross-validation.
 - **Train-Test Split:** 80/20 stratified split to preserve class distribution.
@@ -102,7 +102,7 @@ As a baseline, I implement a simple keyword-based classification method to label
 ### How it works
 - **Model:** [`BertForSequenceClassification`](https://huggingface.co/docs/transformers/model_doc/bert#transformers.BertForSequenceClassification) with 2 output labels and a dropout rate of 0.3.
 - **Tokenizer:** `BertTokenizer` with truncation, padding, and a max token length of 256.
-- **Text Input:** Raw book descriptions from a labeled dataset (`Theory`, `Practice`) mapped to numeric labels.
+- **Text Input:** Raw book descriptions from a labeled dataset mapped to numeric labels.
 - **Dataset Class:** Custom `BookDataset` class extends PyTorch `Dataset` for use with the Hugging Face `Trainer` API.
 - **Data Split:** 80/20 stratified train-test split using `train_test_split`.
 - **Training Framework:** Hugging Face's `Trainer` + `TrainingArguments`
